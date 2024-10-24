@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Список программ">
+    <title>ruDownload</title>
+    <style>
+       body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #2c2c2c;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.program-name {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.download-links {
+    margin-top: 10px;
+}
+
+.download-links a {
+    text-decoration: none;
+    color: #1e90ff;
+    font-weight: bold;
+}
+
+.download-links a:hover {
+    text-decoration: underline;
+}
+
+#search-box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+/* Стили для нижнего колонтитула */
+footer {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+            color: #e0e0e0;
+            margin-top: 20px;
+            border-top: 1px solid #444;
+        }
+
+        footer a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        #scrollTopBtn {
+
+    display: none; /* Кнопка скрыта по умолчанию */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    background-color: #555;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#scrollTopBtn:hover {
+    background-color: #333;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ruDownload</h1>
+        
+        <input type="text" id="search-box" placeholder="Поиск программы...">
+
+        <ul id="program-list">
+            <li>
+                <span class="program-name" id="chrome">Google Chrome</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/LR3l0hXJLPSB5A" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/MBxiXKqZ#C3LY9lC0veRwvtoWBrRhUn9LZI0MTaN6CUddqph6kAk" target="_blank">Скачать с Mega</a> |
+                    <a href="https://www.google.com/intl/ru/chrome/" target="_blank">Скачать с офф. сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="telegram">Telegram Desktop</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/4ard1PB9q-Hn4g" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/AAgDzYAZ#AyCJBzv0YpUCQw_deqb4ZtrkLYzHEvxjFmHiDUUZa4A" target="_blank">Скачать с Mega</a> |
+                    <a href="https://desktop.telegram.org/?setln=ru" target="_blank">Скачать с офф. сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="geforce">Nvidia GeForce Experience</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/4gITYvpuUgk5Sg" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/ABYWRKoZ#KGVZ1WnVYGDKyAUBqCKccKSYWawV8ReW7VSWHIVGD_w" target="_blank">Скачать с Mega</a> |
+                    <a href="https://www.nvidia.com/ru-ru/geforce/geforce-experience/download/" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="obs">OBS Studio</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/DFhzSZH28MvwjA" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/lcxWxTSL#cr4OVMFUX8fmZ_VJvj2_wNgenz3svTdbS_DAQOC7TBs" target="_blank">Скачать с Mega</a> |
+                    <a href="https://obsproject.com/" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>    
+            <li>
+                <span class="program-name" id="sharex">ShareX</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/MbpVh7duqRTgvg" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/EVxwCKCA#mHvfNvDRAc6i0aBFdFISX4Nj9sB3JDg2QEt2TDTZNkU" target="_blank">Скачать с Mega</a> |
+                    <a href="https://getsharex.com/" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="vlc">VLC</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/TtCzjTB2k3hwow" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/9BhX0CjT#GiddstwnXhy4BBIf4xfDUT7tSfIfqy1luIzs8OXsivI" target="_blank">Скачать с Mega</a> |
+                    <a href="https://www.videolan.org/" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="notpadplusplus">Notpad++</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/yr4LmFK-YRRajA" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/EN5HmIRA#6A4Pj9zGDbcZEdW7z_eA47kFWxrMyazfDP6Mjag7_V0" target="_blank">Скачать с Mega</a> |
+                    <a href="https://notepad-plus-plus.org/downloads/v8.7/" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="opera">Opera Web Browser</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/UWjAkNERBWIqeg" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/8JRmWDCR#i8P1dZuxj6Hu6OgZAUpYHWTrbstxTFsBfhd2MP9dRqo" target="_blank">Скачать с Mega</a> |
+                    <a href="https://www.opera.com/" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="nekoray">NekoBox/NekoRay</span>
+                <div class="download-links">
+                    <a href="https://pastebin.com/ZNEA8Ctd" target="_blank">Скачать инструкцию</a> |
+                    <a href="https://github.com/MatsuriDayo/nekoray/releases/tag/4.0-beta4" target="_blank">Скачать с Mega</a> |
+                    <a href="https://github.com/MatsuriDayo/nekoray/releases/tag/4.0-beta4" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="gearup">GearUp Booster</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/H6tVj21GjFtGiA" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/kRZVwDqJ#dUHASm4gPEYkxiG0UWNElRx2CEEEkJWqR7RVoKqci-U" target="_blank">Скачать с Mega</a> |
+                    <a href="https://www.gearupbooster.com/ru/" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="7zip">7-zip</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/bhJiBcSnFh0zpw" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/UIZwwC4a#5G2NE0jJmQS5GV8-qkPOqQup75nbMIzA2cKe6TzeStg" target="_blank">Скачать с Mega</a> |
+                    <a href="https://www.7-zip.org/" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="zoom">Zoom</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/Qic4-7meh202LA" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/QEhhVAZb#q8vl3pXfYEOwrRyo6CBvsFiNdjsLMaBLRMOS-ZwQHwk" target="_blank">Скачать с Mega</a> |
+                    <a href="https://zoom.us/download" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="rufus">Rufus (Portable)</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/o2vb_tcKbB9WNg" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/xQxWAIRL#8-VTBs0mtt39UA8iP0_cVuuEovMxuwWsRohmKk-k4RQ" target="_blank">Скачать с Mega</a> |
+                    <a href="https://rufus.ie/ru/" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="yandexbrowser">Яндекс Бразуер</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/QQS5H7qSDmpvIQ" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/ZEIzySZT#Xnyw38hAN1d2_LEQKnfToGdAlGMjJVLMmZQbW9ts--g" target="_blank">Скачать с Mega</a> |
+                    <a href="https://browser.yandex.ru/" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="firefox">Mozila Firefox</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/6pHl2MW9UY3ngw" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/1IZWlJgI#--_PyuZemNbLmM02m-CRSAw0nFCPNPp7aV8lWg0AddU" target="_blank">Скачать с Mega</a> |
+                    <a href="https://www.mozilla.org/ru/firefox/windows/" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="qbittorrent">qBittorent</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/Ssw22iN_IWA5Pg" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/8Jp1UZRQ#rtJl2pDMnisjR3ZP7tP99BpKH81MH54bd-Ub9h6z4d0" target="_blank">Скачать с Mega</a> |
+                    <a href="https://www.qbittorrent.org/download" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="photoshop">Adobe Photoshop RePack</span>
+                <div class="download-links">
+                    <a href="https://mega.nz/file/dF4j2bhZ#vjy1OCDDdomTO0CWORbsWtLEE3eUVLN5oRixiiP3mZc" target="_blank">Скачать с Mega</a> |
+                    <a href="https://mega.nz/file/UJpAkS6a#pYE0GY1XQtcn-1_i_V1ZjVR7byJBjHSbATTmDyxM8E8" target="_blank">Скачать torrent</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="drwebcureit">Dr WEB CureIt!</span>
+                <div class="download-links">
+                    <a href="https://free.drweb.ru/download+cureit+free/" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="womic">WoMic</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/c5jgeZIv2xTDPQ" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/1UpVjLwR#7vIdX4nyHr9IgP-eQEguR0SQmEa68oVfw0BR8KwSwaY" target="_blank">Скачать с Mega</a> |
+                    <a href="https://wolicheng.com/womic/download.html" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+             <li>
+                <span class="program-name" id="blender">Blender 3D</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/IgQIk1v68cpGHQ" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/ZUBlEZAD#sLgDO8l-vENl5K4TEEoQYLCwGpJgGtYnE20YxwTF6QI" target="_blank">Скачать с Mega</a> |
+                    <a href="https://www.blender.org/download/" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="iorbituninstall">IObit Uninstaller 14 PRO</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/toKxQgMmsOEmNQ" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/pYZi0Z7C#R_Q_EUg2cnmWysPeqxFoQZVG44D_MANWkEI9XaG0TRc" target="_blank">Скачать с Mega</a> |
+                    <a href="https://pastebin.com/C2wg37Eh" target="_blank">Скачать ключ</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="rockstar">Rockstar Games Launcher</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/wEK_Xf1xtyFCNQ" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/hIIUFSKL#K8hz8-4jGmrEr9qnyu6mdV0kD5IvknDYtigoItVBjog" target="_blank">Скачать с Mega</a> |
+                    <a href="https://socialclub.rockstargames.com/rockstar-games-launcher" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="brave">Brave Browser</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/jA2WU7NzzIrpPw" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/gM5AGQhY#SY89C4gAVk_OcXXGsg2fjuWAz-GliemsEOtv_AtrBWI" target="_blank">Скачать с Mega</a> |
+                    <a href="https://brave.com/download/" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="flowframes">Flowframes</span>
+                <div class="download-links">
+                    <a href="https://disk.yandex.ru/d/RGTQXeKbgelskw" target="_blank">Скачать с Яндекс Диска</a> |
+                    <a href="https://mega.nz/file/IAY3VC4T#jDXy4COo50CTVwCIIpNjZ24zOaGID4ey3CQleuKwif8" target="_blank">Скачать с Mega</a> |
+                    <a href="https://nmkd.itch.io/flowframes" target="_blank">Скачать с офф.сайта</a>
+                </div>
+            </li>
+            <li>
+                <span class="program-name" id="office">Microsoft Office 2021 Pro</span>
+                <div class="download-links">
+                    <a href="#" target="_blank">Приобрести лицензию [времемнно не доступно]</a> |
+                    <a href="https://mega.nz/file/hIBVCLhI#smJV4YFToMVutKNPTzvH9MGZ-3PHskUfLpNi8DtKLBo" target="_blank">Скачать с Mega</a> |
+                    <a href="https://officecdn.microsoft.com/db/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/en-us/ProPlus2021Retail.img">Скачать с офф.сайта</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Наверх">⬆</button>
+     <!-- Нижний колонтитул -->
+     <footer>
+        <p>© 2024 ruDownload. Все материалы взяты из открытых источников. Мы не нарушаем авторские права. Автор не несет ответственность за использование материалов, опубликованных на сайте.</p>
+    </footer>
+
+<!-- ПОИСК --> <!-- ПОИСК --> <!-- ПОИСК --> <!-- ПОИСК --> <!-- ПОИСК --> <!-- ПОИСК -->
+ 
+    <script>
+        document.getElementById('search-box').addEventListener('keyup', function() {
+            let filter = this.value.toLowerCase();
+            let programList = document.getElementById('program-list');
+            let programs = programList.getElementsByTagName('li');
+
+            for (let i = 0; i < programs.length; i++) {
+                let programName = programs[i].getElementsByClassName('program-name')[0];
+                if (programName.innerText.toLowerCase().indexOf(filter) > -1) {
+                    programs[i].style.display = '';
+                } else {
+                    programs[i].style.display = 'none';
+                }
+            }
+        });
+ // Показывать кнопку при прокрутке страницы
+ window.onscroll = function() {
+        toggleScrollTopButton();
+    };
+
+    function toggleScrollTopButton() {
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollTopBtn.style.display = "block";
+        } else {
+            scrollTopBtn.style.display = "none";
+        }
+    }
+
+    // Прокрутка страницы вверх при нажатии на кнопку
+    function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+        
+    </script>
+</body>
+</html>
